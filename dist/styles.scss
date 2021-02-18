@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Nunito:wght@300&family=Pacifico&family=Righteous&display=swap');
+
 // Colors
 
 $color1: #eff4f6;
 $color2: #f43151;
 $color3: #0c3354;
 
-// Font Sizes - Desktop
+// Desktop Font Sizes
+$headers-desktop: 25px;
+$content-desktop: 20px;
 
-// Font Sizes - Mobile
+// Mobile Font Sizes
+$headers-mobile: 21px;
+$content-mobile: 16px;
 
 html {
 	scroll-behavior: smooth;
@@ -18,11 +26,16 @@ body {
 	margin: 0;
 
 	background-color: $color3;
+
+	font-family: Nunito;
+
+	font-size: $content-desktop;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 	body {
 		align-items: center;
+		font-size: $content-mobile;
 	}
 }
 
@@ -31,8 +44,9 @@ body {
 	justify-content: center;
 	align-items: baseline;
 
-	position: sticky;
+	position: fixed;
 	top: 0;
+	width: 100%;
 
 	background: $color3;
 	opacity: 0.9;
@@ -57,9 +71,8 @@ body {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 	#navbar {
-		width: 100%;
 		opacity: 1;
 
 		ul {
@@ -85,7 +98,7 @@ body {
 
 #welcome-section {
 	display: grid;
-	grid-template-areas: 'logo welcome welcome';
+	grid-template-areas: 'logo welcome';
 	place-items: center;
 	height: 100vh;
 
@@ -101,12 +114,12 @@ body {
 
 	h1 {
 		grid-area: welcome;
-		align-self: center;
-		border: solid red;
+		justify-self: flex-start;
+		font-family: Righteous;
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 	#welcome-section {
 		display: flex;
 		flex-direction: column;
@@ -119,7 +132,7 @@ body {
 		color: $color1;
 
 		img {
-			max-width: 100%;
+			max-width: 70%;
 			height: auto;
 		}
 	}
@@ -132,7 +145,7 @@ body {
 	padding: 0 5rem 0 5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 	#projects {
 		display: flex;
 		flex-direction: column;
@@ -150,7 +163,7 @@ body {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 }
 
 #profile-info {
@@ -195,7 +208,7 @@ body {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 	#profile-info {
 		display: flex;
 		flex-direction: column;

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Nunito:wght@300&family=Pacifico&family=Righteous&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -7,19 +9,23 @@ body {
   flex-direction: column;
   margin: 0;
   background-color: #0c3354;
+  font-family: Nunito;
+  font-size: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   body {
     align-items: center;
+    font-size: 16px;
   }
 }
 #navbar {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   background: #0c3354;
   opacity: 0.9;
 }
@@ -39,9 +45,8 @@ body {
   transform: scale(1.5);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #navbar {
-    width: 100%;
     opacity: 1;
   }
   #navbar ul {
@@ -63,7 +68,7 @@ body {
 }
 #welcome-section {
   display: grid;
-  grid-template-areas: "logo welcome welcome";
+  grid-template-areas: "logo welcome";
   place-items: center;
   height: 100vh;
   font-size: 50px;
@@ -76,11 +81,11 @@ body {
 }
 #welcome-section h1 {
   grid-area: welcome;
-  align-self: center;
-  border: solid red;
+  justify-self: flex-start;
+  font-family: Righteous;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #welcome-section {
     display: flex;
     flex-direction: column;
@@ -91,7 +96,7 @@ body {
     color: #eff4f6;
   }
   #welcome-section img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
   }
 }
@@ -102,7 +107,7 @@ body {
   padding: 0 5rem 0 5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #projects {
     display: flex;
     flex-direction: column;
@@ -147,7 +152,7 @@ body {
   transform: scale(1.3);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #profile-info {
     display: flex;
     flex-direction: column;
