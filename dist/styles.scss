@@ -177,6 +177,7 @@ body {
 	color: $color1;
 
 	h2 {
+		font-size: 70px;
 	}
 
 	h3 {
@@ -215,6 +216,10 @@ body {
 		gap: 1rem;
 		text-align: center;
 		padding: 0 1rem 0 1rem;
+
+		h2 {
+			font-size: 40px;
+		}
 
 		.profile-links {
 			display: flex;
